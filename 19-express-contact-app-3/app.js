@@ -126,7 +126,7 @@ app.get('/contact/delete/:nama', (req, res) => {
     }
 })
 
-// halaman form ubah data contact
+// halaman form edit data contact
 app.get('/contact/edit/:nama', (req, res) => {
     const contact = findContact(req.params.nama);
 
