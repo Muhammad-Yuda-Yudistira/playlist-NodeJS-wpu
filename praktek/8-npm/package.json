@@ -4,13 +4,17 @@
   "description": "belajar nodejs npm",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "nodemon app",
     "dev": "ls",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yudistira",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.0",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
