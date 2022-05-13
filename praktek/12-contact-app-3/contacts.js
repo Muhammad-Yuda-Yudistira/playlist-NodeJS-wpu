@@ -3,9 +3,6 @@
 const fs = require('fs');
 const { rawListeners } = require('process');
 
-const chalk = require('chalk')
-const validator = require('validator')
-
 // membuat folder data ketika belum ada
 const dirPath = 'data'
 if( !fs.existsSync(dirPath) ) {
