@@ -40,7 +40,7 @@ const addContact = (contact) => {
 // cek nama yang duplikat
 const cekDuplikat = (nama) => {
     const contacts = loadContact()
-    return contacts.find((contact) => contact.nama === nama)
+    return contacts.find((contact) => contact.nama.toLowerCase() === nama.toLowerCase())
 }
 
 module.exports = { loadContact, findContact, addContact, cekDuplikat }
