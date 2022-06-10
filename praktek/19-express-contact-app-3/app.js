@@ -9,6 +9,7 @@ const flash = require('connect-flash')
 
 const { loadContact, findContact, addContact, cekDuplikat, deleteContact, updateContacts} = require('./utils/contacts')
 const { sendStatus } = require('express/lib/response')
+
 const app = express()
 const port = 3000
 
