@@ -111,20 +111,7 @@ app.post('/contact', [
     }
 })
 
-// proses delete contact
-app.get('/contact/delete/:nama', (req, res) => {
-    const contact = findContact(req.params.nama);
 
-    // jika contact tidak ada
-    if(!contact) {
-        res.status(404);
-        res.send('<h1>404</h1>');
-    } else {
-        deleteContact(req.params.nama);
-        req.flash('msg', 'Data contact berhasil dihapus!')
-        res.redirect('/contact');
-    }
-})
 
 // halaman form edit data contact
 app.get('/contact/edit/:nama', (req, res) => {
@@ -177,6 +164,21 @@ app.get('/Contact/:nama', (req, res) => {
         title: 'Halaman Detail Contact',
         contact,
      });
+})
+
+// proses delete contact
+app.get('/contact/delete/:nama', (req, res) => {
+    const contact = findContact(req.params.nama);
+
+    // jika contact tidak ada
+    if(!contact) {
+        res.status(404);
+        res.send('<h1>404</h1>');
+    } else {
+        deleteContact(req.params.nama);
+        req.flash('msg', 'Data contact berhasil dihapus!')
+        res.redirect('/contact');
+    }
 })
 
 app.use('', (req, res) => {
